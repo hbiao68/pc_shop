@@ -1,0 +1,4 @@
+
+body,p,input,textarea,ul,li,ol,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,a{margin:0;padding:0;list-style:none;font-family:黑体;}/*body有默认的外边距8px;p,input,textarea,ul,li,ol,dl,dt,dd,form,h1有默认的边距;list-style:none删除有序列表中圆点;font-family:宋体；*/
+a{text-decoration:none;}
+img{border:0;}
