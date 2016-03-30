@@ -409,6 +409,7 @@ a:focus{color: #333333;;text-decoration:none;}
 .line_height_18px{line-height: 18px;}
 .line_height_35px{line-height: 35px;}
 .line_height_40px{line-height: 40px;}
+.line_height_52px{line-height: 52px;}
 .line_height_56px{line-height: 56px;}
 .line_height_60px{line-height: 60px;}
 .line_height_90px{line-height: 90px;}
@@ -503,6 +504,7 @@ a:focus{color: #333333;;text-decoration:none;}
 .width_90px{width: 90px;}
 .width_100px{width: 100px;}
 .width_110px{width: 110px;}
+.width_120px{width: 120px;}
 .width_140px{width: 140px;}
 .width_200px{width: 200px;}
 .width_210px{width: 210px;}
@@ -510,8 +512,11 @@ a:focus{color: #333333;;text-decoration:none;}
 .width_270px{width: 270px;}
 .width_360px{width: 360px;}
 .width_400px{width: 400px;}
+.width_420px{width: 420px;}
+.width_530px{width: 530px;}
 .width_545px{width: 545px;}
 .width_560px{width: 560px;}
+.width_600px{width: 600px;}
 .width_640px{width: 640px;}
 .width_733px{width: 733px;}
 .width_930px{width: 930px;}
@@ -543,7 +548,9 @@ a:focus{color: #333333;;text-decoration:none;}
 .padding_left_25{padding-left: 25px;}
 .padding_left_30{padding-left: 30px;}
 .padding_left_32{padding-left: 32px;}
+.padding_left_36{padding-left: 36px;}
 .padding_left_42{padding-left: 42px;}
+.padding_left_68{padding-left: 68px;}
 
 .padding_top_0{padding-top: 0;}
 .padding_top_1{padding-top: 1px;}
@@ -555,8 +562,11 @@ a:focus{color: #333333;;text-decoration:none;}
 .padding_top_10{padding-top: 10px;}
 .padding_top_15{padding-top: 15px;}
 .padding_top_20{padding-top: 20px;}
+.padding_top_22{padding-top: 22px;}
 .padding_top_25{padding-top: 25px;}
+.padding_top_26{padding-top: 26px;}
 .padding_top_30{padding-top: 30px;}
+.padding_top_36{padding-top: 36px;}
 .padding_right_0{padding-right: 0;}
 .padding_right_2{padding-right: 2px;}
 .padding_right_5{padding-right: 5px;}
@@ -564,8 +574,12 @@ a:focus{color: #333333;;text-decoration:none;}
 .padding_right_15{padding-right: 15px;}
 .padding_right_20{padding-right: 20px;}
 .padding_right_25{padding-right: 25px;}
+.padding_right_32{padding-right: 32px;}
 .padding_right_42{padding-right: 42px;}
 .padding_right_55{padding-right: 55px;}
+.padding_right_68{padding-right: 68px;}
+.padding_right_92{padding-right: 92px;}
+
 .padding_bottom_0{padding-bottom: 0;}
 .padding_bottom_1{padding-bottom: 1px;}
 .padding_bottom_5{padding-bottom: 5px;}
@@ -574,6 +588,7 @@ a:focus{color: #333333;;text-decoration:none;}
 .padding_bottom_10{padding-bottom: 10px;}
 .padding_bottom_15{padding-bottom: 15px;}
 .padding_bottom_20{padding-bottom: 20px;}
+.padding_bottom_22{padding-bottom: 22px;}
 .padding_bottom_25{padding-bottom: 25px;}
 .padding_bottom_36{padding-bottom: 36px;}
 .padding_10{padding: 10px;}
@@ -605,6 +620,7 @@ a:focus{color: #333333;;text-decoration:none;}
 .margin_left_20{margin-left: 20px;}
 .margin_left_25{margin-left: 25px;}
 .margin_left_30{margin-left: 30px;}
+.margin_left_32{margin-left: 32px;}
 .margin_left_50{margin-left: 50px;}
 .margin_left_55{margin-left: 55px;}
 .margin_left_60{margin-left: 60px;}
@@ -632,6 +648,7 @@ a:focus{color: #333333;;text-decoration:none;}
 .margin_right_32{margin-right: 32px;}
 .margin_right_40{margin-right: 40px;}
 .margin_right_42{margin-right: 42px;}
+.margin_right_48{margin-right: 48px;}
 .margin_right_50{margin-right: 50px;}
 .margin_right_55{margin-right: 55px;}
 .margin_right_80{margin-right: 80px;}
@@ -645,6 +662,7 @@ a:focus{color: #333333;;text-decoration:none;}
 .margin_top_20{margin-top: 20px;}
 .margin_top_22{margin-top: 22px;}
 .margin_top_23{margin-top: 23px;}
+.margin_top_24{margin-top: 24px;}
 .margin_top_25{margin-top: 25px;}
 .margin_top_26{margin-top: 26px;}
 .margin_top_28{margin-top: 28px;}
@@ -803,7 +821,8 @@ a:focus{color: #333333;;text-decoration:none;}
 
 .btn_nobg_whiteborder{color:#ffffff; border-radius: 4px;border: 1px solid #ffffff;text-align: center;padding: 3px 12px;display: inline-block;white-space: nowrap;cursor: pointer;}
 .btn_whitebg_redborder{color:#ff3366; background:#FFFFFF;border-radius: 4px;border: 1px solid #ffffff;text-align: center;padding: 3px 12px;display: inline-block;white-space: nowrap;cursor: pointer;}
-
+.btn_nobg_default{padding:6px 16px;border: 1px solid #999999;cursor: pointer;}
+.btn_nobg_default.active{padding:6px 16px;border: 1px solid #fe5656;cursor: pointer;color: #fe5656;}
 /***************PC首页样式******************/
 .header_top .container,.nav_content .container,.zhanshi .container,.chanpin .container{
 	width : 1200px;

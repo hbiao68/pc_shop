@@ -16,7 +16,7 @@
 	<script type="text/javascript" src="js/PIE.js"></script>
 	<title>商品详情</title>
 </head>
-<body>
+<body class="bg_f9f9f9">
 	<!-- 顶部 -->
 	<div class="box h-box">
 		<div class="content clearfloat">
@@ -164,20 +164,26 @@
                 <span class="">平和源蓉润500mg(4瓶礼盒装)</span>
             </div>
 
-            <!--  -->
+			<style>
+				.bx-wrapper {
+					 margin : 0;
+				}
+			</style>
+
+            <!-- 商品内容 -->
             <div class="bg_ff">
                 <!-- 商品图片 -->
-                <div class="float_left slider width_640px">
+                <div class="float_left slider width_640px padding_left_20 padding_right_20">
                     <ul class="bxslider">
-                        <li><img src="images/goods_big_img.png" /></li>
-                        <li><img src="images/goods_big_img.png" /></li>
-                        <li><img src="images/goods_big_img.png" /></li>
+                        <li><img src="images/goods_big_img.png" class="height_420px"/></li>
+                        <li><img src="images/goods_big_img.png" class="height_420px"/></li>
+                        <li><img src="images/goods_big_img.png" class="height_420px"/></li>
                     </ul>
 
                     <div id="bx-pager">
-                        <a data-slide-index="0" href=""><img src="images/6trg_44.png" /></a>
-                        <a data-slide-index="0" href=""><img src="images/6trg_46.png" /></a>
-                        <a data-slide-index="0" href=""><img src="images/6trg_44.png" /></a>
+                        <a data-slide-index="0" href=""><img src="images/6trg_44.png" class="width_120px height_120px"/></a>
+                        <a data-slide-index="1" href=""><img src="images/6trg_46.png" class="width_120px height_120px"/></a>
+                        <a data-slide-index="2" href=""><img src="images/6trg_44.png" class="width_120px height_120px"/></a>
                     </div>
 
                 </div>
@@ -190,20 +196,20 @@
 
                 </script>
                 <!-- 购买商品数量 -->
-                <div class="margin_left_640 margin_top_36">
-                    <div class="font_24">
+                <div class="margin_left_640 padding_top_36 padding_right_92">
+                    <div class="font_24 font_weight_bold">
                         平和源蓉润500mg(4瓶礼盒装)
                     </div>
 
-                    <div class="line_height_20">
+                    <div class="line_height_18 margin_top_20 ">
                         祛除风湿，补气通络，舒筋活血，健脾温肾。用于
                         风寒湿痹，筋骨疼痛，脾胃虚寒，肾亏腰酸，以及
                         妇女气虚血亏。
                     </div>
 
-                    <div class="bg_f3f3f3 relative">
+                    <div class="bg_f3f3f3 relative margin_top_24 padding_bottom_22">
                         <div class="padding_left_32">
-                            <div class="margin_top_26">
+                            <div class="padding_top_26 font_16">
                                 <span class="margin_right_14">价格</span>
                                 <span class="">￥142.00</span>
                             </div>
@@ -227,40 +233,232 @@
                         <div class=""></div>
                     </div>
 
-                    <div style="border-top:1px dashed red"></div>
+                    <div class="margin_top_20" style="border-top:1px dashed #b6b6b6"></div>
 
-                    <div class="margin_top_32">
-                        <span class="margin_right_12">数量</span>
-                        <span class=""></span>
-                        <span class="margin_left_18 color_99">剩余400件</span>
-                    </div>
+                    <div class="margin_left_32 relative">
+						<div class="margin_top_32 relative">
+							<span class="margin_right_12">数量</span>
+							<span class="overflow_hidden" id="countWidget">
+								<img src="images/heweh_09.png" class="relative minus" style="right: -5px;">
+								<input type="text" class="width_30px text-center relative height_30px" style="top:1px" value="1" readonly>
+								<img src="images/heweh_11.png" class="relative plus" style="left: -5px;">
+							</span>
+							<span class="margin_left_18 color_99 font_12">剩余400件</span>
+						</div>
 
-                    <div class="margin_top_23">
-                        <span class="float_left margin_right_12">类型</span>
-                        <div class="margin_left_12">
-                            <span style="padding:6px 16px;border: 1px solid #999999">老年装</span>
-                            <span style="padding:6px 16px;border: 1px solid #999999">青年装</span>
-                            <span style="padding:6px 16px;border: 1px solid #999999">儿童装</span>
-                        </div>
-                    </div>
+						<div class="margin_top_23 class_type">
+							<span class="float_left margin_right_12">类型</span>
+							<div class="margin_left_12">
+								<span class="btn_nobg_default">老年装</span>
+								<span class="btn_nobg_default active">青年装</span>
+								<span class="btn_nobg_default">儿童装</span>
+							</div>
+						</div>
+
+						<script>
+
+							function countWidget(){
+								$("#countWidget .minus").on("click",function(){
+									//获取数据
+									var inputObj = $(this).closest(".overflow_hidden").find("input");
+									var value = inputObj.val();
+									if(value - 1 > 0){
+										inputObj.val(value-1);
+									}
+								});
+
+								$("#countWidget .plus").on("click",function(){
+									//获取数据
+									var inputObj = $(this).closest(".overflow_hidden").find("input");
+									var value = parseInt(inputObj.val());
+									inputObj.val(value+1);
+								});
+							}
+
+							$(function(){
+								//选择类型
+								$(".class_type .btn_nobg_default").on("click",function(){
+									$(".class_type .btn_nobg_default").removeClass("active");
+									$(this).addClass("active");
+								});
+
+								//初始化计数器
+								countWidget();
+							});
+						</script>
+
+						<div class="absolute" style="top:0px;right: 32px;">
+							<img src="images/heweh_14.png" onclick="collection(this)">
+							<span>收藏</span>
+						</div>
+					</div>
+
+					<script>
+						function collection(obj){
+							var imgSrc = $(obj).attr("src");
+							if(imgSrc.indexOf("gf_14")>0){
+								$(obj).attr("src","images/heweh_14.png");
+							}else{
+								$(obj).attr("src","images/gf_14.png");
+							}
+
+						}
+					</script>
                     
-                    <div class="margin_top_36">
+                    <div class="margin_top_36 margin_left_32">
                         <div>
-                            <img src="images/heweh_24.png">
+                            <img src="images/heweh_24.png" class="margin_right_48">
                             <img src="images/heweh_26.png">
                         </div>
                     </div>
 
-                    <div class="margin_top_38">
+                    <div class="margin_top_38 padding_bottom_22 margin_left_32">
                         <div>
-                            <img src="images/geew_31.png">
+                            <img src="images/geew_31.png" class="margin_right_80">
                             <img src="images/geew_33.png">
                         </div>
                     </div>
-
+					<div class="clearfix"></div>
                 </div>
             </div>
 
+			<!-- 商品tab  商品介绍、买家评价、售后服务 -->
+			<div class="clearfix">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#goodsIntroduce" aria-controls="goodsIntroduce" role="tab" data-toggle="tab">
+						商品介绍
+					</a></li>
+					<li role="presentation"><a href="#customCommon" aria-controls="customCommon" role="tab" data-toggle="tab">
+						买家评价
+					</a></li>
+					<li role="presentation"><a href="#selledService" aria-controls="selledService" role="tab" data-toggle="tab">
+						售后服务
+					</a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="goodsIntroduce">
+						<div class="margin_top_24 bg_f3f3f3 padding_left_36">
+							<div class="line_height_52px font_weight_bold font_16" style="border-bottom: 1px dashed #bdbdbd">
+								商品参数
+							</div>
+
+							<div class="padding_left_32 padding_right_32 line_height_20 padding_top_22 padding_bottom_22">
+
+								<div>
+									<div class="float_left width_530px">
+										<span>生产许可证：</span>
+										<span>120545451241681</span>
+									</div>
+
+									<div class="float_left width_530px">
+										<span>厂名：</span>
+										<span>天津中胃和治药业有限公司</span>
+									</div>
+
+									<div class="float_left">
+										<span>厂名：</span>
+										<span>天津中胃和治药业有限公司</span>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+								<div class="margin_top_16">
+									<div class="float_left width_530px">
+										<span>厂家联系方式：</span>
+										<span>18229886770</span>
+									</div>
+
+									<div class="float_left width_530px">
+										<span>保质期：</span>
+										<span>730天</span>
+									</div>
+
+									<div class="float_left width_530px">
+										<span>保质期：</span>
+										<span>730天</span>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+								<div class="margin_top_16">
+									<div class="float_left width_530px">
+										<span>包装方式：</span>
+										<span>包装</span>
+									</div>
+
+									<div class="float_left width_530px">
+										<span>净含量：</span>
+										<span>500mg</span>
+									</div>
+
+									<div class="float_left width_530px">
+										<span>净含量：</span>
+										<span>500mg</span>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+								<div class="margin_top_16">
+									<div class="float_left width_530px">
+										<span>产地：</span>
+										<span>中国大陆</span>
+									</div>
+
+									<div class="float_left width_530px">
+										<span>系列：</span>
+										<span>逍淤质</span>
+									</div>
+
+									<div class="float_left width_530px">
+										<span>系列：</span>
+										<span>逍淤质</span>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+								<div class="margin_top_16">
+									<div class="float_left width_530px">
+										<span>生产日期：</span>
+										<span>2015年9月14号</span>
+									</div>
+
+									<div class="float_left width_530px">
+										<span>特产品类：</span>
+										<span>神农架葛粉</span>
+									</div>
+
+									<div class="float_left width_530px">
+										<span>特产品类：</span>
+										<span>神农架葛粉</span>
+									</div>
+
+									<div class="clearfix"></div>
+								</div>
+
+							</div>
+
+						</div>
+
+
+						<div class="padding_top_20">
+							<img src="images/goodsImage_0.png" class="img-responsive margin_center">
+							<img src="images/goodsImage_1.png" class="img-responsive margin_center">
+							<img src="images/goodsImage_2.png" class="img-responsive margin_center">
+							<img src="images/goodsImage_3.png" class="img-responsive margin_center">
+							<img src="images/goodsImage_4.png" class="img-responsive margin_center">
+							<img src="images/goodsImage_5.png" class="img-responsive margin_center">
+							<img src="images/goodsImage_6.png" class="img-responsive margin_center">
+							<img src="images/goodsImage_7.png" class="img-responsive margin_center">
+						</div>
+
+					</div>
+					<div role="tabpanel" class="tab-pane" id="customCommon">customCommon</div>
+					<div role="tabpanel" class="tab-pane" id="selledService">selledService</div>
+				</div>
+			</div>
 
 
         </div>
