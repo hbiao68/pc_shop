@@ -413,10 +413,10 @@
 			<div class="clearfix">
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#goodsIntroduce" aria-controls="goodsIntroduce" role="tab" data-toggle="tab">
+					<li role="presentation"><a href="#goodsIntroduce" aria-controls="goodsIntroduce" role="tab" data-toggle="tab">
 						商品介绍
 					</a></li>
-					<li role="presentation"><a href="#customCommon" aria-controls="customCommon" role="tab" data-toggle="tab">
+					<li role="presentation" class="active"><a href="#customCommon" aria-controls="customCommon" role="tab" data-toggle="tab">
 						买家评价
 					</a></li>
 					<li role="presentation"><a href="#selledService" aria-controls="selledService" role="tab" data-toggle="tab">
@@ -425,9 +425,10 @@
 				</ul>
 
 				<!-- Tab panes -->
-				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane active" id="goodsIntroduce">
-						<div class="margin_top_24 bg_f3f3f3 padding_left_36">
+				<div class="tab-content margin_top_22 margin_bottom_25" style="border: 1px solid #b5b5b5;border-radius: 8px;">
+					<!-- 商品介绍 -->
+					<div role="tabpanel" class="tab-pane " id="goodsIntroduce">
+						<div class="bg_f3f3f3 padding_left_36">
 							<div class="line_height_52px font_weight_bold font_16" style="border-bottom: 1px dashed #bdbdbd">
 								商品参数
 							</div>
@@ -542,7 +543,156 @@
 						</div>
 
 					</div>
-					<div role="tabpanel" class="tab-pane" id="customCommon">customCommon</div>
+					<!-- 评论 -->
+					<div role="tabpanel" class="tab-pane active" id="customCommon">
+
+						<div class="padding_top_16 padding_bottom_16 padding_left_32 bg_f3f3f3">
+							<img src="images/hrefew_42.png">
+							<span>评论</span>
+						</div>
+						<div class="bg_ff padding_left_32 padding_right_32">
+							<div class="bg_ff padding_top_36 padding_bottom_36 border_b_bottom_eee overflow_hidden">
+								<div class="float_left width_960px border_b_right_eee ">
+
+									<div class="float_left font_weight_bold font_42 color_ff5656">
+										4.0
+									</div>
+
+									<div class="float_left margin_left_25" style="padding-top: 7px;">
+										<div class="">
+											<ul class="list-unstyled start_list">
+												<li class="float_left margin_right_10">
+													<img src="images/hrefew_49.png">
+												</li>
+												<li class="float_left margin_right_10">
+													<img src="images/hrefew_49.png">
+												</li>
+												<li class="float_left margin_right_10">
+													<img src="images/hrefew_51.png">
+												</li>
+												<li class="float_left margin_right_10">
+													<img src="images/hrefew_51.png">
+												</li>
+												<li class="float_left margin_right_10">
+													<img src="images/hrefew_51.png">
+												</li>
+											</ul>
+										</div>
+										<div class="line_height_18">
+											评价数 : 1
+										</div>
+									</div>
+
+									<script>
+										$(function(){
+											$("ul.start_list li").on("click",function(){
+												//获取当前的对象
+												var currentObj = $(this);
+												var ulObj = currentObj.closest("ul");
+												var liObjs = ulObj.find("li");
+												liObjs.find("img").attr("src","images/hrefew_51.png");
+												var indexNum = liObjs.index(currentObj);
+												for(var i=0; i <= indexNum; i++){
+													$(liObjs.get(i)).find("img").attr("src","images/hrefew_49.png");
+												}
+											});
+										});
+									</script>
+
+									<div class="float_right padding_right_140 relative">
+										<img src="images/common_level.png">
+										<div class="absolute " style="left:15px;bottom:-20px">非常不满意</div>
+										<div class="absolute " style="left:120px;bottom:-20px">不满意</div>
+										<div class="absolute " style="left:227px;bottom:-20px">一般</div>
+										<div class="absolute " style="left:325px;bottom:-20px">满意</div>
+										<div class="absolute " style="left:410px;bottom:-20px">非常满意</div>
+										<span class="absolute bg_ed3128" style="right:145px;top:-22px">5.0</span>
+										<span class="absolute" style="right:150px;top:-2px;border-width:5px;line-height:0;height:0;width:0;border-style:solid; border-color: #ed3128 transparent transparent transparent;   "></span>
+									</div>
+
+								</div>
+								<div class="float_left width_360px text-center">
+									<img src="images/hrefew_54.png" class="margin_auto">
+								</div>
+							</div>
+
+							<div class="margin_top_22 overflow_hidden padding_bottom_22" style="border-bottom: 1px dashed #f3f3f3;">
+								<div class="">
+									<div class="float_left">
+										效果真好，效果真的非常棒
+									</div>
+									<div class="float_right">
+										<span class="margin_right_50">骑着毛驴去流浪</span>
+										<span class="">2015-12-02</span>
+									</div>
+									<div class="clearfix" ></div>
+								</div>
+								<div class="margin_top_22">
+									<div class="">
+										<ul class="list-unstyled start_list">
+											<li class="float_left margin_right_10">
+												<img src="images/hrefew_49.png">
+											</li>
+											<li class="float_left margin_right_10">
+												<img src="images/hrefew_49.png">
+											</li>
+											<li class="float_left margin_right_10">
+												<img src="images/hrefew_51.png">
+											</li>
+											<li class="float_left margin_right_10">
+												<img src="images/hrefew_51.png">
+											</li>
+											<li class="float_left margin_right_10">
+												<img src="images/hrefew_51.png">
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="margin_top_22 overflow_hidden padding_bottom_22" style="border-bottom: 1px dashed #f3f3f3;">
+								<div class="">
+									<div class="float_left">
+										效果真好，效果真的非常棒
+									</div>
+									<div class="float_right">
+										<span class="margin_right_50">骑着毛驴去流浪</span>
+										<span class="">2015-12-02</span>
+									</div>
+									<div class="clearfix" ></div>
+								</div>
+								<div class="margin_top_22">
+									<div class="">
+										<ul class="list-unstyled start_list">
+											<li class="float_left margin_right_10">
+												<img src="images/hrefew_49.png">
+											</li>
+											<li class="float_left margin_right_10">
+												<img src="images/hrefew_49.png">
+											</li>
+											<li class="float_left margin_right_10">
+												<img src="images/hrefew_51.png">
+											</li>
+											<li class="float_left margin_right_10">
+												<img src="images/hrefew_51.png">
+											</li>
+											<li class="float_left margin_right_10">
+												<img src="images/hrefew_51.png">
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="line_height_40px">
+								『查看所有评论』
+							</div>
+
+
+						</div>
+					</div>
+					<!-- 售后服务 -->
 					<div role="tabpanel" class="tab-pane" id="selledService">selledService</div>
 				</div>
 			</div>
