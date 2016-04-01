@@ -5,12 +5,12 @@
 	<meta http-equiv=Content-Type content=“text/html;charset=UTF-8″>
 	<meta http-equiv=X-UA-Compatible content=IE=EmulateIE8>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/jcarousel.basic.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/hb_pc.css">
 	<script src="js/jquery-1.9.1.min.js"></script>
-	<script src="js/jquery.jcarousel.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/index.js"></script>
 	<script type="text/javascript" src="js/PIE.js"></script>
@@ -173,115 +173,58 @@
             <!-- 商品内容 -->
             <div class="bg_ff">
                 <!-- 商品图片 -->
-                <div class="float_left slider width_640px padding_left_20 padding_right_20">
+                <div class="float_left slider width_640px padding_left_20 padding_right_20" id="sliderContent">
+                    <ul class="bxslider">
+                        <li><img src="images/goods_big_img.png" class="height_420px"/></li>
+                        <li><img src="images/goods_big_img.png" class="height_420px"/></li>
+                        <li><img src="images/goods_big_img.png" class="height_420px"/></li>
+                        <!--<li><img src="images/goods_big_img.png" class="height_420px"/></li>-->
+                        <!--<li><img src="images/goods_big_img.png" class="height_420px"/></li>-->
+                        <!--<li><img src="images/goods_big_img.png" class="height_420px"/></li>-->
+                    </ul>
 
-					<div style="position: relative;  ">
+                    <!--<div id="bx-pager">-->
+                        <!--<a data-slide-index="0" href=""><img src="images/6trg_44.png" class="width_120px height_120px"/></a>-->
+                        <!--<a data-slide-index="1" href=""><img src="images/6trg_46.png" class="width_120px height_120px"/></a>-->
+                        <!--<a data-slide-index="2" href=""><img src="images/6trg_44.png" class="width_120px height_120px"/></a>-->
+                        <!--<a data-slide-index="3" href=""><img src="images/6trg_44.png" class="width_120px height_120px"/></a>-->
+                        <!--<a data-slide-index="4" href=""><img src="images/6trg_44.png" class="width_120px height_120px"/></a>-->
+                        <!--<a data-slide-index="5" href=""><img src="images/6trg_44.png" class="width_120px height_120px"/></a>-->
+                    <!--</div>-->
 
-						<div  class="goods_img product-image-jcarousel" id="li_{$goods.goods_id}">
-							<ul>
-								<li data-id="li_1">
-									<img src="images/goods_big_img.png" class="height_420px"/>
-								</li>
-								<li data-id="li_2">
-									<img src="images/goods_big_img.png" class="height_420px"/>
-								</li>
-								<li data-id="li_3">
-									<img src="images/goods_big_img.png" class="height_420px"/>
-								</li>
-							</ul>
-						</div>
-						<a href="#" class="product-image-jcarousel-control-prev">&nbsp;</a>
-						<a href="#" class="product-image-jcarousel-control-next">&nbsp;</a>
-					</div> <!-- Product details images -->
+					<ul id="bx-pager">
+						<li><a data-slide-index="0" href=""><img src="images/goods_big_img.png" class="width_120px height_120px"/></a></li>
+						<li><a data-slide-index="1" href=""><img src="images/goods_big_img.png" class="width_120px height_120px"/></a></li>
+						<li><a data-slide-index="2" href=""><img src="images/goods_big_img.png" class="width_120px height_120px"/></a></li>
+						<!--<li><a data-slide-index="3" href=""><img src="images/goods_big_img.png" class="width_120px height_120px"/></a></li>-->
+						<!--<li><a data-slide-index="4" href=""><img src="images/goods_big_img.png" class="width_120px height_120px"/></a></li>-->
+						<!--<li><a data-slide-index="5" href=""><img src="images/goods_big_img.png" class="width_120px height_120px"/></a></li>-->
+					</ul>
 
-					<!-- Thumbnail images -->
-					<div style="position: relative; ">
-						<div class="more-views jcarousel">
-							<ul>
-								<li data-id="1">
-									<img src="images/6trg_44.png" class="width_120px height_120px"/>
-								</li>
-								<li data-id="2">
-									<img src="images/6trg_46.png" class="width_120px height_120px"/>
-								</li>
-							</ul>
-						</div>
-						<a href="#" class="jcarousel-control-prev">&nbsp;</a>
-						<a href="#" class="jcarousel-control-next">&nbsp;</a>
-					</div>
                 </div>
+				<style>
+					#sliderContent .bx-wrapper{
 
-				<script>
-					$(function(){
-
-
-						/****************上面的混动效果*******************/
-						jQuery('.product-image-jcarousel').jcarousel({
-							visible: 1,
-							scroll:1,
-							wrap: 'circular'
+					}
+				</style>
+                <script>
+                    $(function(){
+						$('#bx-pager').bxSlider({
+							minSlides: 4,
+							maxSlides: 4,
+							slideWidth: 120,
+							slideMargin: 39,
+							pager:false,
+							onSliderLoad: function(){
+								$(".bx-wrapper").last().css("margin","auto").css("max-width","none");
+							}
 						});
-
-						$('.product-image-jcarousel-control-prev')
-								.on('jcarouselcontrol:active', function() {
-									$(this).removeClass('inactive');
-								})
-								.on('jcarouselcontrol:inactive', function() {
-									$(this).addClass('inactive');
-								})
-								.jcarouselControl({
-									target: '-=1'
-								});
-
-						$('.product-image-jcarousel-control-next')
-								.on('jcarouselcontrol:active', function() {
-									$(this).removeClass('inactive');
-								})
-								.on('jcarouselcontrol:inactive', function() {
-									$(this).addClass('inactive');
-								})
-								.jcarouselControl({
-									target: '+=1'
-								});
-
-						/****************下面的混动效果*******************/
-
-						jQuery('.jcarousel').jcarousel({
-							visible: 1,
-							scroll:1,
-							wrap: 'circular'
-						});
-
-						$('.jcarousel-control-prev')
-								.on('jcarouselcontrol:active', function() {
-									$(this).removeClass('inactive');
-								})
-								.on('jcarouselcontrol:inactive', function() {
-									$(this).addClass('inactive');
-								})
-								.jcarouselControl({
-									target: '-=1'
-								});
-
-						$('.jcarousel-control-next')
-								.on('jcarouselcontrol:active', function() {
-									$(this).removeClass('inactive');
-								})
-								.on('jcarouselcontrol:inactive', function() {
-									$(this).addClass('inactive');
-								})
-								.jcarouselControl({
-									target: '+=1'
-								});
-
-						/****************给下面的图片绑定事件，点击图片，上面的图片跟着滚动******************/
-						jQuery('.jcarousel ul').on("click", 'li', function(event){
-							jQuery('.product-image-jcarousel').jcarousel('scroll', jQuery('.product-image-jcarousel li[data-id=li_' + jQuery(this).attr('data-id') + ']'));
-						})
-					});
+                        $('.bxslider').bxSlider({
+//                            pagerCustom: '#bx-pager'
+                        });
+                    });
 
                 </script>
-
                 <!-- 购买商品数量 -->
                 <div class="margin_left_640 padding_top_36 padding_right_92">
                     <div class="font_24 font_weight_bold">
