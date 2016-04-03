@@ -54,6 +54,7 @@ a:focus{color: #333333;;text-decoration:none;}
 }
 
 /*********** 字体颜色 **************/
+.color_ff5656{color: #ff5656;}
 .color_fe5857{color: #fe5857;}
 
 .color_3bbaff{color: #3bbaff;}
@@ -199,8 +200,10 @@ a:focus{color: #333333;;text-decoration:none;}
 .font_32{font-size: 32px;}
 .font_34{font-size: 34px;}
 .font_36{font-size: 36px;}
+.font_42{font-size: 42px;}
 
 /********* 背景色 ***********/
+.bg_ed3128{background:#ed3128}
 .bg_0ea9e2{background:#0ea9e2}
 .bg_23c3ab{background:#23c3ab}
 .bg_efc028{background:#efc028}
@@ -340,6 +343,7 @@ a:focus{color: #333333;;text-decoration:none;}
 
 .clear_border{border: none !important;}
 .margin_center{margin:0 auto;}
+.margin_auto{margin:auto;}
 
 .border_fa{border: 1px solid #fafafa;}
 .border_top_fa{border-top: 1px solid #fafafa;}
@@ -561,6 +565,7 @@ a:focus{color: #333333;;text-decoration:none;}
 .padding_top_8{padding-top: 8px;}
 .padding_top_10{padding-top: 10px;}
 .padding_top_15{padding-top: 15px;}
+.padding_top_16{padding-top: 16px;}
 .padding_top_20{padding-top: 20px;}
 .padding_top_22{padding-top: 22px;}
 .padding_top_25{padding-top: 25px;}
@@ -579,6 +584,8 @@ a:focus{color: #333333;;text-decoration:none;}
 .padding_right_55{padding-right: 55px;}
 .padding_right_68{padding-right: 68px;}
 .padding_right_92{padding-right: 92px;}
+.padding_right_100{padding-right: 100px;}
+.padding_right_140{padding-right: 140px;}
 
 .padding_bottom_0{padding-bottom: 0;}
 .padding_bottom_1{padding-bottom: 1px;}
@@ -587,6 +594,7 @@ a:focus{color: #333333;;text-decoration:none;}
 .padding_bottom_7{padding-bottom: 7px;}
 .padding_bottom_10{padding-bottom: 10px;}
 .padding_bottom_15{padding-bottom: 15px;}
+.padding_bottom_16{padding-bottom: 16px;}
 .padding_bottom_20{padding-bottom: 20px;}
 .padding_bottom_22{padding-bottom: 22px;}
 .padding_bottom_25{padding-bottom: 25px;}
@@ -653,6 +661,7 @@ a:focus{color: #333333;;text-decoration:none;}
 .margin_right_55{margin-right: 55px;}
 .margin_right_80{margin-right: 80px;}
 .margin_right_100{margin-right: 100px;}
+.margin_right_140{margin-right: 140px;}
 .margin_right_3p{margin-right: 3%;}
 .margin_top_5{margin-top: 5px;}
 .margin_top_7{margin-top: 7px;}
